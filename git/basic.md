@@ -53,3 +53,13 @@
 - `git diff --staged` : 스테이징 영역과 최근 커밋의 차이 출력
 - `git log` : 커밋 기록 확인 (잘 쓰지 않음)
 ---
+
+# VSCode Git GUI
+VSCode에서 Source Control을 통해 git을 제어 할 수 있다
+![소스컨트롤텝위치](image.png)
+![git_add_버튼_위치](image-1.png)
+> git add 버튼 처럼 스테이징 영역으로 이동시킴
+---
+## git add . 명령어 버튼 <한번에 모든 파일을 스테이징 영역으로 이동>
+![saveAllChanges버튼위치](image-3.png)
+
