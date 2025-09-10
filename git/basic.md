@@ -62,4 +62,3 @@ VSCode에서 Source Control을 통해 git을 제어 할 수 있다
 ---
 ## git add . 명령어 버튼 <한번에 모든 파일을 스테이징 영역으로 이동>
 ![saveAllChanges버튼위치](image-3.png)
-
