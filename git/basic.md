@@ -212,5 +212,18 @@ $RECYCLE.BIN/
 ↑이렇게 .gitignore 파일에 붙여넣기 한다 
 
 ---
+# github
+## 원격 저장소 생성, 연결, 동기화
+1. 원격 저장소 생성
+2. 지역 저장소 - 원격 저장소 연결
+3. 지역 저장소 -> 원격 저장소 push
+4. 원격 저장소 파일 생성
+5. 지역 저장소 <- 원격 저장소 pull
 
-git remote -v : 원격 저장소 주소 목록
+`git remote -v` : 원격 저장소 주소 목록 보기 명령어
+![alt text](image-6.png)
+
+
+
+깃허브에서 원격 저장소를 삭제해도 로컬 저장소와의 연결은 남아 있음 그걸 지워야 함
+git remote remove origin
