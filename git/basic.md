@@ -62,3 +62,148 @@ VSCode에서 Source Control을 통해 git을 제어 할 수 있다
 ---
 ## git add . 명령어 버튼 <한번에 모든 파일을 스테이징 영역으로 이동>
 ![saveAllChanges버튼위치](image-3.png)
+
+---
+# .gitignore
+## 어떤 파일인가? 역할이 무엇인가?
+- Git에게 **이 파일들은 추적하지마라** 라고 알려주는 설정 파일.
+- 버전 관리할 필요 없는 파일(임시 파일, 로그, 빌드 산출물, 개인 설정 파일등)을 Git 저장소에서 제외할 때 사용.
+#### 역할 :
+- 불필요한 파일이 Git 저장소에 올라가는 걸 방지. 
+- 협업 시 팀원 마다 다른 **환경 설정 파일 (.env, IDE 설정, OS 캐시 파일등)**이 올라가 충돌하는 걸 막음. 
+- 보안상 민감한 정보 (**API Key, 비밀번호, 인증서)가 실수로 커밋 되는 것을 막음.
+  
+## .gitignore의 주의사항은 무엇인가?
+### 주의할 점
+
+처음 부터 gitignore에 안넣고 커밋을 해서 저장소로 옮긴 뒤에 다시 gitignore에 넣으려고 하면 작업트리로 가버린다. 
+
+- 한번이라도 저장소에 가게된 파일은 gitignore에 등록을 해도 흐름을 벗어 날 수가 없다.
+
+- 이미 추적 중인 파일은 .gitignore에 추가해도 무시되지 않음.
+  - 해결: git rm --cached 파일명으로 추적에서 제거해야 함.
+
+- .gitignore는 로컬뿐 아니라 저장소에 같이 올라가야 팀원 전체에 적용됨.
+
+- 너무 광범위하게 작성하면 필요한 파일까지 무시될 수 있음(예: *.json 전체 무시).
+
+- 보안 민감 파일은 가능하면 아예 커밋하기 전에 .gitignore에 추가해야 안전.
+
+## gitignore.io는 어떤 서비스인가?
+무엇을 gitignore에 넣어야 하는지 넣지 말아야 하는지 판단 하기 위한 사이트
+#### 개발 환경별(언어, IDE, OS)로 필요한 .gitignore 템플릿을 자동 생성해주는 서비스.
+
+# 프로젝트를 시작 할때 가장 먼저 해야 하는것
+
+저장소에 포함되면 안되는 파일들
+
+![gitignore.io웹기본검색창
+화면](image-4.png)
+
+> 본인 환경에 맞게 검색
+
+```md
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,react,macos,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,react,macos,windows
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
+
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,react,macos,windows
+
+```
+↑ 이런식으로 나옴
+
+![.gitignore설정파일에에추가한화면](image-5.png)
+↑이렇게 .gitignore 파일에 붙여넣기 한다 
