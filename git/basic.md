@@ -210,3 +210,7 @@ $RECYCLE.BIN/
 
 ![.gitignore설정파일에에추가한화면](image-5.png)
 ↑이렇게 .gitignore 파일에 붙여넣기 한다 
+
+---
+
+git remote -v : 원격 저장소 주소 목록
