@@ -6,7 +6,7 @@
 
 ## 일차별 강의 내용
 
-- 2025년 9월 8일 : OT
-- 2025년 9월 9일 : AI와 GEMINI CLI
-- 2025년 9월 10일 : Git과 GitHub
-- 
+- 2025-09-08 : OT
+- 2025-09-09  : AI와 GEMINI CLI
+- 2025-09-10 : Git과 GitHub - git/basic
+- 2025-09-11 : 
