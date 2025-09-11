@@ -7,9 +7,38 @@
 
 </head>
 <body>
-  <form action="">
-    <input type="text" value="text" placeholder="안내문구" required>
-    <input type="password">
+  <form action="#">
+    <input type="text" name="text"/>
+    <input type="password" name="password"/>
+    <!-- <input type="text" value="text" placeholder="안내문구" required> -->
+    <div>
+      <label for="check1">체크박스1</label>
+      <input type="checkbox" id="check1" value="체크박스 1" name="checkbox">
+      <label for="check2">체크박스2</label>
+      <input type="checkbox" id="check2"value="체크박스 2" name="checkbox">
+    </div>
+    <div>
+      <label for="radio1">라디오 1</label>
+      <input type="radio" id="radio1" name="radio" value="radio1">
+      <label for="radio2">라디오 2</label>
+      <input type="radio" id="radio2" name="radio" value="radio2">
+    </div>
+    <!-- <div>
+      <input type="file"/>
+      <input type="data"/>
+      <input type="datetime"/>
+      <input type="color" name="" id=""/>
+    </div> -->
+    <textarea name="" id=""></textarea>
+    <!-- select 와 option, ul과 li의 관계와 유사-->
+    <select nane="" id="">
+      <option>국가</option>
+      <option>대한민국</option>
+      <option>미국</option>
+      <option>중국</option>
+    </select>
+    <input type="submit" value="전송">
+
   </form>
 </body>
 </html>
