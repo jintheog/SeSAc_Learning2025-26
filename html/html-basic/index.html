@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <a href="https://naver.com">naver.com</a>
-  <h1>마크다운의 #</h1>
-  <h2>마크다운의 ##</h2>
-  <h3>마크다운의 ###</h3>
-  <h6>마크다운의 ######</h6>
-  <p>일반적인 텍스트의[문단]을 표현</p>
-  <a>마크다운의 ![]()</a>
-  <img alt="대체 텍스트" src=""> <!--여는 태그와 닫는 태그가 따로 없고 하나의 태그로 표현을 한다.-->
-  ![대체텍스트](이미지경로,source)
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://naver.com">naver.com</a>
+    <h1>마크다운의 #</h1>
+    <h2>마크다운의 ##</h2>
+    <h3>마크다운의 ###</h3>
+    <h6>마크다운의 ######</h6>
+    <p>일반적인 텍스트의[문단]을 표현</p>
+    <a>마크다운의 ![]()</a>
+    <img alt="대체 텍스트" src="" />
+    <!--여는 태그와 닫는 태그가 따로 없고 하나의 태그로 표현을 한다.-->
+    ![대체텍스트](이미지경로,source)
+    <br />
+    <br />
+    <hr />
+    <!--id 속성은 문서내에서 요소를 구별한 고유한 값(식별자)-->
+    <p id="1">1</p>
+    <p id="2">2</p>
+    <p>3</p>
 
-  <br>
-  <br>
-  <hr>
-  
-</body>
+    <!-- class 속성은 문서내에서 요소를 그룹화하는 값-->
+    <p>4</p>
+    <p>4</p>
+    <p class="5">5</p>
+    <p class="5">5</p>
+    <p>6</p>
+
+    <!-- id와 class의 값은 소문자 알파벳으로 시작-->
+    <!-- 띄어쓰기가 불가능, - , _ 를 사용해야 한다-->ㅉ
+    <p class="fruit red">빨간 사과</p>
+    <p class="fruit red">빨간 딸기</p>
+    <p class="fruit blue">파란 포도</p>
+    <p class="animal red">빨간 강아지</p>
+    <p class="animal blue">파란 고양이</p>
+
+    <hr />
+
+    <!--구조화 하기 위해 요소를 중첩한다 하는 개념이 중요하다-->
+    <div>
+      division(분할) 별다른 고유한 기능이 없다. 요소들을 묶어서 분할 하는
+      태그이다. 가장많이 사용 하는 태그가
+    </div>
+    <div>
+      <div>
+        <h1>팀 버너스리</h1>
+        <h2>Tim Berners-Lee</h2>
+      </div>
+      <img
+        alt="팀버너스리초상화"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg"
+      />
+      <div>
+        <p>출생</p>
+        <p>1995년 6월 8일</p>
+      </div>
+      <div>
+        <p>출신학교</p>
+        <p>옥스퍼드 대학교 물리학 학사</p>
+      </div>
+      <div>
+        <strong>배우자</strong>
+        낸시 칼슨(1990 ~ 2011)
+      </div>
+    </div>
+  </body>
 </html>
