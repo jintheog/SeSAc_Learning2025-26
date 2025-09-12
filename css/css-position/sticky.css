@@ -1,0 +1,17 @@
+.header{
+  height: 200px;
+  background-color: lightblue;
+}
+
+.sticky{
+  height: 100px;
+  width: 100%;
+  background-color: lightgreen;
+  position: sticky;
+  top: 50px; /*고정 위치*/
+}
+
+.content{
+  height: 2000px;
+  background-color: lightgrey;
+}

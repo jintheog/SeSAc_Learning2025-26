@@ -396,3 +396,29 @@ dvh, dvw
 ---
 
 # CSS 포지션 속성
+포지션(position)
+- 요소가 웹 페이지에서 어디에 위치할지 결정 하는 속성
+- 다른 요소 또는 부모 요소와의 관계를 통해 배치된다
+
+## Relative position
+- 기본적으로는 static 처럼 배치가 된다 
+- 이동속성 top, left, bottom, right을 부여 할 수 있다
+  - static은 이동속성을 부여 할 수 없다. 
+
+- 이동의 기준은 원래 위치를 기준으로 이동한다. 
+
+## Absolute
+- 사용할때 부모요소 혹은 조상요소가 필요한다 
+  - absolute인 요소를 감싸는 요소가 필요 하다
+  - 부모(조상)요소가 relative, absolute, fixed 중 하나여야 한다
+
+-  위치(top,left,right,bottom) 속성으로 이동.
+-  absolute인 요소는 다른 요소에 영향을 주지 않음. 
+-  부모요소가 없으면 뷰포트 기준(왼쪽상단기준)으로 움직인다 
+-  
+## fixed
+- 뷰포트를 기준으로 고정
+
+## sticky
+- `relative`와 `fixed`의 혼합된 형태
+- 
