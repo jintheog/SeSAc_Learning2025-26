@@ -175,20 +175,141 @@ h3 {
 - 요소에 최종적으로 적용된 모든 CSS값을 확인할 수 있다
 - 상속받은 스타일과 직접 적용된 스타일을 구분하여 볼 수 있다
 
+---
+
+## 선택자
+- 스타일을 적용할 html 요소를 선택 하는 방법
+- 태그, 클래스, 아이디 등으로 요소를 선택함
+  
+## 기본 선택자
+### 전체 선택자 (Universal Selector)
+- 문서 내 모든 요소 선택
+```css
+* {
+  속성: 값;
+}  
+```
+e.g.
+```css
+* {
+  font-size: 100px;
+}
+```
+
+## 태그 선택자
+- 특정 태그의 모든 요소를 선택
+- `태그명` 형태로 작성한다
+```css
+태그명 {
+  속성: 값;
+}
+```
+
+```css
+/* 모든 p 태그의 글자를 파란색으로 만들기 */
+p {
+  color: blue;
+}
+
+/* 모든 h1 태그의 글자를 크고 굵게 만들기 */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+```
+
+## 클래스 선택자 (class selector)
+- 특정 클래스의 모든 요소를 선택
+- 여러 요소에 같은 클래스를 사용할 수 있다
+- 하나의 요소에 여러 클래스를 사용할 수 있다
+- 재사용성이 높다
+- `.클래스명` 형대로 작성한다  
+  - **.점을 붙여서 쓴다 라는것이 중요함**
 
 
+## 아이디 선택자 (id selector)
+- **#샵을 붙여서 쓴다**
 
 
+## 속성 선택자 (attribute selector)
+- 특정 속성을 가진 요소를 선택
+- [속성명] 형태로 작성한다
+
+```css
+  
+```
+
+## 관계 선택자 
+```html
+<body>
+  <p class="red font-200">빨강 200</p>
+  <p class="green font-200">초록 200</p>
+  <p class="red font-50">빨강 50</p>
+  <p class="blue font-50">파랑 50</p>
+  <p id="bold" class="red font-50">빨강 50 굵게</p>
+  <a href="https://www.naver.com">naver</a>
+  <a href="https://www.google.com">google</a>
+
+  <div>
+    <p></p>
+    <p></p>
+  </div>
+</body>
+```
+- body와 p태그,a태그는 부모와 자식이다
+- body 태그 안에있는 p태그와 a태그 와 div 태그 들은 서로 모두 형제 관계이다. 같은 블록에 있음. 
+
+- body안에 있는 p와 div 안에 있는 p는 관계가 다르다
+- body안에 있는 p태그들은 부모가 body이다
+- div안에 있는 p태그들은 부모가 div이다. 선택 하는 방법이 다르다. 
 
 
+```html
+  <div id="parent">
+    <p class="child">id가 #parent인 div의 자식</p>
+    <p class="child">id가 #parent인 div의 자식</p>
+    <p>id가 #parent인 div의 자식</p>
+  </div>
+```
+```css
+#parent > .child { /*id가 parent인 요소안의 class가 child인 요소들을 선택*/
+  color: violet;
+}
+```
 
+### 자손 선택자 (decendent selector)
+- 꺽쇠가 없음 
+```css
+부모선택자 후손선택자 {
+  속성: 값;
+}
+```
 
+### 그룹 선택자 (group selector)
 
+### 혼합 선택자
 
+### 우선순위
+1. !important: CSS 속성을 **강제로 우선시** 하는 키워드
+2. ~~요소 인라인 스타일~~: 요소에 직접 적용된 스타일 (인라인은 안쓰는거싱 좋음)
+3. id 선택자
+4. class 선택자
+5. tag 선택자
+6. 우선순위가 같은경우 나중에 작성된 선택자가 우선순위를 같는다. 
 
+# 속성
 
+- color
+- font
+- font-weight 텍스트의 굵기를 설정
+- text-align
+- width
+- height
 
+## 인라인 요소 너비와 높이를 지정 할 수 없다 : 
+- 인라인 요소의 크기는 자식(내부) 컨텐츠의 크기에 의해 결정된다. 
 
-
-
-
+## cursor 속성
+- 요소 위에 마우스를 올렸을 떄 커서 모양 지정
+- 

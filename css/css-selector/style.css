@@ -1,0 +1,54 @@
+.red{
+  color:red;
+}
+.green{
+  color:green;
+}
+.blue{
+  color:blue;
+}
+.font-200{
+  font: size 200px;
+}
+.font-50{
+  font: size 50px;
+}
+
+#bold{
+  font-weight: 900;
+}
+
+[href] {
+  text-decoration: none;
+}
+
+[href="https://www.naver.com"] {
+  color: green;
+}
+
+[href="https://www.google.com"] {
+  color:red;
+}
+
+div > p {
+  font-style: italic;
+}
+
+#parent > .child { /*id가 parent인 요소안의 class가 child인 요소들을 선택*/
+  color: violet;
+}
+
+body p { 
+  font-weight: 900;
+}
+
+
+/*혼합 선택자*/
+span.red {
+  color: lightcoral;
+}
+
+span.green{
+  color:lightgreen;
+}
+
