@@ -312,4 +312,37 @@ h1 {
 
 ## cursor 속성
 - 요소 위에 마우스를 올렸을 떄 커서 모양 지정
+
+
+# 단위
+```html
+<body>
+  <div class="parent">
+    <div class="child-1"></div>
+    <div class="child-2"></div>
+  </div>
+</body>
+</html>
+```
+```css
+.parent{
+  background-color:aquamarine;
+  height: 100%;
+}
+```
+- body(부모)의 높이가 없기때문에 parent class div태그의 높이가 100%이면 화면에 아무것도 나오지 않는다. 
+
+## 뷰포트단위
+- 화면이 최초 로딩 되었을 때의 높이와 너비를 기준으로 계산 함. 
+
+## 다이나믹 뷰포트
+dvh, dvw
 - 
+
+## 16진수 표현
+
+
+# 상속
+- 부모 요소에 지정된 스타일 속성이 자식 요소에게 전달되는 작동 방식
+- 상속되는 속성과 상속되지 않는 속성으로 구분할 수 있다. 
+  
