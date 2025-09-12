@@ -53,7 +53,12 @@ p {
 <p style="color: blue; font-size: 20px;">
   이 텍스트는 파란색이며, 크기는 20px입니다.
 </p>
+
+/** e.g. */
+<h1 style="color: red">빨</h1>
 ```
+- 늘어나면 가독성이 떨어진다
+
 
 ### 내부 스타일 시트(internal style sheet)
 - html 문서의 `<head>` 내부에 `<style>` 태그를 사용하여 CSS 코드를 작성 하는 방법
@@ -67,7 +72,9 @@ p {
         color: blue;
         text-align: center;
       }
-
+      h2 {
+      color: orange;
+    }
       p {
         color: gray;
         font-size: 16px;
@@ -77,6 +84,7 @@ p {
   <body>
     <h1>웹사이트 제목</h1>
     <p>이것은 스타일이 적용된 문단입니다.</p>
+    <h2>주</h2>
   </body>
 </html>
 ```
