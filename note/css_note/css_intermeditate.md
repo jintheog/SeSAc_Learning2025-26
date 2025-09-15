@@ -59,3 +59,78 @@
 - 주축이 세로(column)라면 세로로 배치 
 
 블락요소는 줄바꿈이 발생한다.div는 블락요소이다.
+
+## 플렉스 컨테이너(Flex Container) 주요 속성
+
+- display: flex; 속성이 적용된 요소는 플렉스 컨테이너
+
+![alt text](image-2.png)
+  - 배치 방향 : row (행) -> 이게 기본값이다
+    - 방향을 지정 하지 않으면 이 형태
+  
+## 방향을 결정 하는건 flex container 이다
+
+### 교차축
+- 주축이 row이면 교차축은 위에서 아래로
+- 주축이 column이면 교차축은 왼쪽에서 오른쪽
+
+```html
+  <div class="flex-container d-row center align-center">
+    <!-- 플렉스 컨테이너 내부 div-->
+    <div class="box "></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+```
+
+```css
+.center{
+  /*주축 방향 중앙 정렬*/
+  justify-content: center;
+}
+
+.align-center{
+  /* align-items*/
+  /* 교차축 방향 중앙 정렬*/
+  align-items: center;
+}
+
+```
+![alt text](image-3.png)
+
+- 가로로도 중앙 세로로도 중앙
+
+### `align-items`
+- 교차 축(cross-axis) 기준 플렉스 아이템 정렬
+- `stretch` (기본값): 아이템이 컨테이너 높이에 맞춰 늘어남
+- `flex-start:` 교차 축의 시작점에서 정렬
+- `flex-end:` 교차 축의 끝점에서 정렬
+- `center:` 교차 축의 중앙에서 정렬
+- `baseline:` 텍스트 기준선에 맞춰 정렬
+
+
+### gap
+- 플랙스 컨테이너에 설정하는것
+- 플렉스 아이템 간의 간격을 조절함
+- margin의 문제점: flex container를 쓰게 되면 item들 간의 간격을 조절 하고 싶은데 마진때문에 여백이 생김
+
+
+### align-self
+- align-self는 align-items 보다 우선순위가 높다
+
+
+### flex-basis
+-방향이 열이면 높이가 되고  방양이 행이면 너비가 된다
+
+
+### flex-grow
+- 컨테이너의 빈공간을 차지하는 비율
+
+### flex-shrink
+- 공간 부족시 
+
+### flex
+- `flex-grow`, `flex-shrink`, `flex-basis`
