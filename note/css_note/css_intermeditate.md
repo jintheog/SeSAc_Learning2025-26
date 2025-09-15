@@ -143,3 +143,22 @@
 
 # 미디어 쿼리 (media query)
 
+# 그리그 시스템
+플렉스 박스를 12등분을 함. 
+
+```html
+<div class="text-center">
+  <!-- .row : 플렉스 컨테이너 -->
+  <div class="row gap-3">
+  <!-- .col : 플렉스 컨테이너 -->
+    <div class="col-6 bg-success">col</div>
+    <div class="col bg-success">col</div>
+    <div class="col bg-success">col</div>
+    <div class="col bg-success">col</div>
+  </div>
+</div>
+```
+6칸, 2칸 2칸 2칸 씩 나누어 갖는다는 뜻. 
+
+![alt text](image-4.png)
+
