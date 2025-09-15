@@ -370,3 +370,16 @@ git
 main이 로컬의 최신 커밋 이고 origin/main이 원격 저장소의 최신 커밋이다 
 
 
+---
+
+# Git Review
+
+git add 파일명
+git add . 
+
+git commit
+git commit -m "커밋메시지"
+
+
+## 저장소에 커밋을 쌓는다 
+- 무수히 쌓음으로써 하나의 프로그림이 만드렁져 간다
