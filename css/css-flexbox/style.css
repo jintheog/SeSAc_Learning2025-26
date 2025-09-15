@@ -1,0 +1,16 @@
+.flex-container{
+  display: flex;
+  background-color: bisque;
+
+  height: 500px;
+  width: 100vw;
+}
+
+.box {
+  background-color: lightblue;
+  width: 100px;
+  height: 200px;
+  margin: 20px;
+  /*플렉스 아이템은 별도의 display를 설정 X*/
+  /*왜냐하면 부모가 display: flex라면 자동으로 플렉스 아이템*/
+}
