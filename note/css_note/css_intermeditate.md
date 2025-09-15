@@ -134,3 +134,12 @@
 
 ### flex
 - `flex-grow`, `flex-shrink`, `flex-basis`
+
+
+---
+
+# 반응형 웹 디자인 vs 적응형 웹 디자인
+
+
+# 미디어 쿼리 (media query)
+
