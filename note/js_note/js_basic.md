@@ -131,3 +131,19 @@ console.log(bool1); //true
 const bool2 = number === str;
 console.log(bool2); //false
 ```
+
+# 형 변환
+
+## 명시적 형변환 vs 암시적 형변환
+
+### 명시적 형변환 :
+
+- 개발자가 직접 변환
+
+### 암시적 형변환 :
+
+- JS엔진이 자동으로 변환
+
+## 문자열 형변환 :
+
+- `string`혹은 `toString` 사용
