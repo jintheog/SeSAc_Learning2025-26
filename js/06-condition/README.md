@@ -36,7 +36,7 @@ true && true; // true
 
 ```jsx
 let number = 1; // 변수 number를 선언하고, 1을 할당하라는 동작의 지시문
-let numenr2; // 변수 number2를 선언하라는 동작의 선언문
+let number2; // 변수 number2를 선언하라는 동작의 선언문
 ```
 
 ## 조건문 (condition statement)
@@ -50,3 +50,9 @@ let numenr2; // 변수 number2를 선언하라는 동작의 선언문
 - `if ~ else if ~ else` 문
 - 삼항 연산자 표현식
 - `switch`문
+
+#### `if ~ else if ~ else`
+
+- 조건식이 참일 때 코드 실행
+- 여러 조건식이 필요할 때 사용
+- 실행 코드 블록은 중괄호 `{}`로 구분
