@@ -56,3 +56,52 @@ array2[0] = -1;
 //첫 번째 원소를 콘솔에 출력
 console.log(array2[0]);
 console.log(array2);
+
+// 원소의 추가와 제거
+// 배열데이터.push(데이터)
+// .push() 함수
+
+// 변수 array3을 선언하고, 배열 데이터 [0] 을 할당
+let array3 = [0];
+// 배열 array3에 1을 원소로 추가
+array3.push(1);
+console.log(array3);
+
+// 배열데이터.pop()
+// 배열의 마지막 원소를 제거
+// 제거한 원소를 반환(데이터를 생성)
+
+// 배열 array3 마지막 원소를 제거
+array3.pop();
+console.log(array3);
+
+// 배열의 반복
+// 배열에 저장된 원소를 반복해서 접근하는 방법
+// [1, 2, 3];
+
+// for 반복문 활용
+// 배열의 인덱스가 0 ~ 배열길이-1 범위를 가진다는 특성 활용
+
+// 0 부터 배열길이-1 까지 숫자를 출력하세요
+// 배열의 길이: 배열데이터.length
+
+// 변수 array4 를 선언하고, 배열 [1,2,3]을 할당
+let array4 = [1, 2, 3];
+// 배열 array4의 길이 출력
+console.log(array4.length);
+
+// for 반복문을 활용해서
+// 0 부터 배열 길이 -1 까지 반복
+for (let index = 0; index <= array4.length - 1; index++) {
+  // 코드블럭
+  // 위치 번호에 해당하는 원소를 출력
+  console.log(`${index} : ${array4[index]}`);
+}
+
+// for..of 반복
+// 인덱스(위치번호) 활용X
+// 배열에서 직접적으로 원소를 꺼내옴
+// for (원소 of 배열){}
+for (let element of array4) {
+  console.log(element);
+}
