@@ -23,4 +23,9 @@ function divide(n1, n2) {
   return n1 / n2;
 }
 
-export { subtract, multiply, divide };
+console.log(divide(1, 2));
+
+//상수도 내보내고 불러올 수 있다
+const PI = 3.14;
+
+export { subtract, multiply, divide, PI };
