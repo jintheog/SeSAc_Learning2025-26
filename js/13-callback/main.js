@@ -37,3 +37,53 @@ numbers4.forEach((element) => {
     console.log(element);
   }
 });
+console.log("======================================");
+
+//각 원소에 + 1 을 한 결과를 모아서 새로운 배열
+
+// 빈 새로운 배열
+const newArray = [];
+
+numbers4.forEach((element) => {
+  //새로운 배열에 + 1을 저장
+  newArray.push(element + 1);
+});
+
+console.log(newArray);
+console.log("======================================");
+
+//map() 활용
+const newArray2 = numbers4.map((element) => {
+  //반환값: 원소 + 1
+  return element + 1;
+});
+console.log(newArray2);
+
+//map()을 활용해서 원소 * 2를 한 데이터를 모은 새로운 배열 생성
+const newArray3 = numbers4.map((element) => {
+  return element * 2;
+});
+console.log(newArray3);
+
+const numbers5 = [1, 2, 3, 4, 5, 6];
+
+//원소 중 짝수만 모아서 반환
+//map() + 내부 로직 조건문(if)
+console.log(
+  numbers5.map((element) => {
+    if (element % 2 === 0) {
+      return true;
+    }
+  })
+);
+//[ undefined, true, undefined, true, undefined, true ]
+console.log("===================");
+//filter
+console.log(
+  numbers5.filter((element) => {
+    if (element % 2 === 0) {
+      return true;
+    }
+  })
+);
+// [ 2, 4, 6 ]
