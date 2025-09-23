@@ -26,3 +26,11 @@
 - `then()`, `catch()`, `finally()` 문법 대체
 - `async`: 함수가 비동기 처리를 포함함을 선언하는 키워드
 - `await`: `async` 함수 내부에서 Promise가 완료될 때까지 기다리는 키워드
+
+---
+
+### `map((product) => { ... })` → `map` 메서드에 넘겨줄 콜백 함수 표현식
+
+### `async function name(...) { ... }` → 독립된 함수 선언식
+
+### `const name = async (...) => { ... }` → 비동기 화살표 함수 표현식
