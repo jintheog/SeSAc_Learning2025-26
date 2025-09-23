@@ -54,3 +54,43 @@
   - PUT: 자원 전체 수정
   - PATCH: 자원 일부 수정
   - DELETE: 자원 삭제
+
+# URL(Uniform Resource Locator)
+
+- 웹에서 서버의 위치를 나타내는 주소
+- URL의 구성 요소
+  - 스키마(Scheme)
+  - 도메인 이름(Domain Name)
+  - 리소스 경로(Path)
+  - 매개변수(Parameters)
+
+# URL 구조
+
+```jsx
+<https://www.naver.com/search?query=날씨&location=서울>
+```
+
+1. `https://` (스키마, Scheme)
+
+- 통신 방식(규칙)
+- `http://` 또는 `https://`
+
+2. `www.naver.com` (도메인 이름, Domain Name)
+
+- 서버 이름
+- 예시: google.com, youtube.com
+
+3. `/search` (Path Parameters)
+
+- 특정 리소스의 고유한 경로(식별자)를 표현
+- 예시: /search, /posts, /users
+- 예시2: /posts/1, /posts/2, /posts/3
+
+4. `?query=날씨&location=서울` (Query Parameters)
+
+- 무엇을 검색 했느냐는 쿼리 파라미터로 나타넨다
+- 서버에 전달하는 추가 정보
+- 주로, 데이터의 검색, 정렬, 필터링 등을 표현
+- `?`로 시작하며 `&`로 구분
+- 예시: `?query=날씨&location=서울`
+- 예시2: `?sortBy=title&order=asc`
