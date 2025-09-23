@@ -19,3 +19,10 @@
 - `resolve` 또는 reject 함수 호출 시 비동기 작업 종료
 
 `resolve()` : 성공을 나타내는 함수
+
+# async await
+
+- Promise를 더 쉽고 가독성 좋게 사용하는 문법
+- `then()`, `catch()`, `finally()` 문법 대체
+- `async`: 함수가 비동기 처리를 포함함을 선언하는 키워드
+- `await`: `async` 함수 내부에서 Promise가 완료될 때까지 기다리는 키워드
