@@ -21,14 +21,14 @@
         //input에 사용자가 입력한 값
         const value = e["target"]["value"];
 
-        //value["length"] 가 8 미만이면 p 태그에 텍스트를 설정
+        //1. p태그 요소를 선택
+        //2. value["length"] 가 8 미만이면 p 태그에 텍스트를 설정
         //"글자가 8글자 미만입니다"
         const pTag = document.querySelector("#message");
         if (value["length"] < 8) {
           pTag["textContent"] = "글자가 8글자 미만입니다";
         }
-        // 그런데 value["length"] 가 8 이상이면 p태그에 텍스트를 설정
-        // 빈 문자열
+        // 3. 그런데 value["length"] 가 8 이상이면 p태그에 텍스트를 빈 문자열로 설정
         else {
           pTag["textContent"] = "";
         }
