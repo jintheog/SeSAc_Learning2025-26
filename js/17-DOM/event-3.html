@@ -10,6 +10,8 @@
     <button>클릭 클릭</button>
     <input type="text" />
     <p id="message"></p>
+
+    <a href="https://naver.com">naver</a>
     <script>
       // input 요소를 선택
       const inputTag = document.querySelector("input");
@@ -17,7 +19,10 @@
       inputTag.addEventListener("input", (e) => {
         //매개변수 e : 이벤트 정보를 저장하는 객체
         console.log(e["target"]["value"]);
-
+        /*
+        target은 이벤트 객체의 속성,
+        value는 입력 요소(예: <input>)의 속성,
+        */
         //input에 사용자가 입력한 값
         const value = e["target"]["value"];
 
@@ -45,13 +50,21 @@
         alert(text);
       });
 
-      buttonTag.addEventListener("click", () => {
+      buttonTag.addEventListener("click", (event) => {
         // alert("두 번째 핸들러");
         // 발생한 이벤트 종류
         console.log(event.type);
 
         // 이벤트가 발생한 요소
         console.log(event.target);
+      });
+
+      // a 태그를 선택하고, 변수 link에 할당
+      const link = document.querySelector("a");
+      // 변수 link에 addEventListener() 를 사용해서
+      // click 이벤트 핸들러 함수를 지정
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
       });
     </script>
   </body>

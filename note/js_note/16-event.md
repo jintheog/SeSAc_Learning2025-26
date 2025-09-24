@@ -13,3 +13,11 @@
 ![alt text](image-3.png)
 
 # HTML 인라인 이벤트 속성
+
+# JS 이벤트 속성
+
+## `addEventListener()`
+
+```jsx
+element.addEventListener(type, handler, options);
+```
