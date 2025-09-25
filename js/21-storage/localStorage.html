@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage</title>
+  </head>
+  <body>
+    <!-- 21-storage/localstorage.html-->
+    <button>조회</button>
+    <button id="delete">삭제</button>
+
+    <script>
+      //로컬스토리지에 데이터 저장
+      //데이터를 저장할 때 객체 {key: value} 형태로 저장
+      localStorage.setItem("key", "value");
+      localStorage.setItem("키", "값");
+      localStorage.setItem("저녁", "도시락");
+
+      // 태그명이 button 요소 선택
+
+      const button = document.querySelector("button");
+
+      // button 요소에 click 이벤트 헨들러 지정
+      button.addEventListener("click", () => {
+        //로컬스토리지에서 key가 '저녁' 데이터를 불러오기
+        // localStorage.getItem(key) : key에 해당되는 로컬 스토리지 데이터를 불러오기
+        const data = localStorage.getItem("저녁");
+        alert(data);
+      });
+
+      //id 속성이 delete 요소 선택
+      const deleteButton = document.querySelector("#delete");
+
+      //deleteButton 에 click 이벤트 핸들러 지정
+      deleteButton.addEventListener("click", () => {
+        //로컬스토리지에서 key가 '저녁' 데이터를 삭제
+        //localStorage.removeItem(key) : key에 해당되는 로컬 스토리지 데이터를 삭제
+        localStorage.removeItem("저녁");
+      });
+    </script>
+  </body>
+</html>
