@@ -62,14 +62,3 @@ const user = {
 
 func(user);
 func2(user);
-
-//욥셔널 채이닝
-const object1 = {
-  id: 1,
-  body: "This is some awesome thinking!",
-  postId: 242,
-  likes: 3,
-};
-
-// console.log(object1["user"]);
-console.log();
