@@ -36,3 +36,40 @@ obj4["age"] = 21;
 // 객체를 생성하면서 age 속성 수정, planet 속성 추가
 obj5 = { ...obj1, age: 21, planet: "지구" };
 console.log(obj5);
+
+// 배열 데이터의 스프레드 연산자
+arr1 = [1, 2, 3, 4, 5];
+
+// 메모리 주소 복사
+arr2 = arr1;
+arr2[0] = 0;
+console.log(arr1); // [0, 2, 3, 4, 5]
+console.log(arr2); // [0, 2, 3, 4, 5]
+
+// 스프레드 연산자를 활용한 복사
+// 스프레드 연산자로 새로운 배열을 생성해서 arr3에 할당
+let arr3 = [...arr1];
+arr3[0] = -1;
+console.log(arr1); //[ 0, 2, 3, 4, 5 ]
+console.log(arr3); //[ -1, 2, 3, 4, 5 ]
+
+//스프레드 연산자를 활용한 원소를 추가
+let arr4 = [...arr1, 6, 7, 8];
+console.log(arr4);
+/**[
+  0, 2, 3, 4,
+  5, 6, 7, 8
+] */
+
+// 리액트에서는 스프레드 연산자를 어떻게 사용하는가?
+
+// 원소가 객체인 배열
+// 객체를 저장한 배열
+objectArr = [{ name: "철수", age: 20 }];
+
+// 새로운 객체를 추가한 "새로운 배열"을 생성
+let newObjectArr = [...objectArr, { name: "영희", age: 20 }];
+objectArr.push({ name: "영희", age: 20 });
+
+console.log(objectArr); //[ { name: '철수', age: 20 }, { name: '영희', age: 20 } ]
+console.log(newObjectArr); //[ { name: '철수', age: 20 }, { name: '영희', age: 20 } ]
