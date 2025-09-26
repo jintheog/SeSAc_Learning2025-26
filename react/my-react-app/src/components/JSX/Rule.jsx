@@ -7,9 +7,9 @@ import React from "react";
 // 파일 당 하나 존재하는 함수는 컴포넌트를 뜻하는데
 // 컴포넌트 함수는 HTML 요소(element)를 반환
 export default function Rule() {
-  // DOM
-  //
-  //
+  // DOM API 로 할 경우
+  // const element = document.createElement("h1")
+  // element.textContet = "App"
   //
   // return <div className="font-bold text-blue-900">App</div>;
   // 규칙1. 1개의 태그만 반환해야 한다
