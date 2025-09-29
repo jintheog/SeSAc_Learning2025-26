@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MyButton from "./components/Component/MyButton";
 import MyList from "./components/Component/MyList";
+import OnClick from "./components/EventHandling/OnClick";
+
 export default function App() {
   return (
     <div>
@@ -13,6 +15,7 @@ export default function App() {
       <Interpolation />
       <MyList />
       <MyButton />
+      <OnClick />
       <Footer></Footer>
     </div>
   );
