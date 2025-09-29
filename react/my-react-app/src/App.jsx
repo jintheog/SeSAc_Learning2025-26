@@ -8,6 +8,7 @@ import MyList from "./components/Component/MyList";
 import OnClick from "./components/EventHandling/OnClick";
 import OnChange from "./components/EventHandling/OnChange";
 import OnSubmit from "./components/EventHandling/onSubmit";
+import Parent from "./components/Props/Parent";
 // 컴포넌트 함수 외부는 import문을 제외하고는 작성하지 않는다
 
 //파일명과 동일한 함수는 컴포넌트 함수
@@ -15,16 +16,17 @@ import OnSubmit from "./components/EventHandling/onSubmit";
 
 export default function App() {
   return (
-    <div>
+    <>
       {/* <Rule></Rule> */}
-      <Header></Header>
+      {/* <Header></Header> */}
       {/* <Interpolation /> */}
-      <MyList />
-      <MyButton />
-      <OnClick />
-      <OnChange />
-      <OnSubmit />
-      <Footer></Footer>
-    </div>
+      {/* <MyList /> */}
+      {/* <MyButton /> */}
+      {/* <OnClick /> */}
+      {/* <OnChange /> */}
+      {/* <OnSubmit /> */}
+      {/* <Footer></Footer> */}
+      <Parent />
+    </>
   );
 }
