@@ -27,6 +27,7 @@ export default function OnChange() {
     <>
       {/**실습 2 */}
       {/**onChange 이벤트 속성에서 이벤트 객체를 전달하면서 handleNumberChange 호출 */}
+      OnChange :<p></p>
       <input
         type="number"
         className="w-7xl border-4 border-b-cyan-500"

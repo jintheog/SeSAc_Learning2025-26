@@ -7,6 +7,12 @@ import MyButton from "./components/Component/MyButton";
 import MyList from "./components/Component/MyList";
 import OnClick from "./components/EventHandling/OnClick";
 import OnChange from "./components/EventHandling/OnChange";
+import OnSubmit from "./components/EventHandling/onSubmit";
+// 컴포넌트 함수 외부는 import문을 제외하고는 작성하지 않는다
+
+//파일명과 동일한 함수는 컴포넌트 함수
+//
+
 export default function App() {
   return (
     <div>
@@ -17,6 +23,7 @@ export default function App() {
       <MyButton />
       <OnClick />
       <OnChange />
+      <OnSubmit />
       <Footer></Footer>
     </div>
   );
