@@ -9,6 +9,7 @@ import OnClick from "./components/EventHandling/OnClick";
 import OnChange from "./components/EventHandling/OnChange";
 import OnSubmit from "./components/EventHandling/onSubmit";
 import Parent from "./components/Props/Parent";
+import ProfileContainer from "./components/PropsExample/ProfileContainer";
 // 컴포넌트 함수 외부는 import문을 제외하고는 작성하지 않는다
 
 //파일명과 동일한 함수는 컴포넌트 함수
@@ -27,6 +28,7 @@ export default function App() {
       {/* <OnSubmit /> */}
       {/* <Footer></Footer> */}
       <Parent />
+      <ProfileContainer />
     </>
   );
 }
