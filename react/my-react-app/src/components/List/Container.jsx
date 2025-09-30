@@ -31,11 +31,16 @@ export default function Container() {
       <li>{array[7]}</li> */}
 
       {/**userArray를 map()을 활용해서 반복 */}
-      {userArray.map((user) => {
+      {userArray.map((userElement) => {
+        //user 원소의 형태
+        // {id: 1 , name: 우영}
+        // User 컴포넌트에 속성 이름 user에 변수 userElement를 지정(전달) 한다
+        // props 활용
         return (
-          <li>
-            {user["id"]} - {user["name"]}
-          </li>
+          // <li>
+          //   {user["id"]} - {user["name"]}
+          // </li>
+          <User user={userElement}></User>
         );
       })}
     </div>
