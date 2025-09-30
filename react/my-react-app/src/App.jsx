@@ -13,7 +13,8 @@ import Parent from "./components/Props/PropsChildren/Parent";
 import ProfileContainer from "./components/Props/PropsExample/ProfileContainer";
 import CardContainer from "./components/Props/PropsFunction/CardContainer";
 // import Container from "./components/Condition/Container";
-import Container from "./components/List/Container";
+// import Container from "./components/List/Container";
+import Container from "./components/State/Container";
 // 컴포넌트 함수 외부는 import문을 제외하고는 작성하지 않는다
 
 //파일명과 동일한 함수는 컴포넌트 함수
