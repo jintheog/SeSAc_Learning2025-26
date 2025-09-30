@@ -40,8 +40,24 @@ export default function Container() {
           // <li>
           //   {user["id"]} - {user["name"]}
           // </li>
-          <User user={userElement}></User>
+          // userElement = {id: ... , name: ...}
+          // id는 고유한(2개 이상 존재하지 않는) 속성 / name은 고유하지 않은 속성
+
+          //반복의 대상이 되는 요소에 key  라고 하는 이름의 속성과 값을 설정을 해야 한다
+          // key 에 설정되는 값은 고유한 값(객체의 속성) 이어야한다
+          // 반복 렌더링에서 key 속성의 역할은
+          // 동일하게 반복 생성된 컴포넌트를 구별(식별) 하기 위한 속성
+          <User key={userElement["id"]} user={userElement}></User>
         );
+
+        {
+          /**맵을 안썼을 때의 표현 */
+        }
+        // <User key={1} user={user[0]}></User>
+        // <User key={2} user={user[1]}></User>
+        // <User key={3} user={user[2]}></User>
+        // <User key={4} user={user[3]}></User>
+        // <User key={5} user={user[4]}></User>
       })}
     </div>
   );
