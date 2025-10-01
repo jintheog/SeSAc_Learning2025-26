@@ -14,10 +14,12 @@ import ProfileContainer from "./components/Props/PropsExample/ProfileContainer";
 import CardContainer from "./components/Props/PropsFunction/CardContainer";
 // import Container from "./components/Condition/Container";
 // import Container from "./components/List/Container";
-import Container from "./components/State/Container";
+// import Container from "./components/State/Container";
 import NumberState from "./components/State/NumberState";
 import ObjectState from "./components/State/ObjectState";
 import ArrayState from "./components/State/ArrayState";
+import Container from "./components/StateAdvanced/Container";
+
 // 컴포넌트 함수 외부는 import문을 제외하고는 작성하지 않는다
 
 //파일명과 동일한 함수는 컴포넌트 함수
@@ -38,10 +40,10 @@ export default function App() {
       {/* <Parent /> */}
       {/* <ProfileContainer /> */}
       {/* <CardContainer /> */}
+      {/* <NumberState /> */}
+      {/* <ObjectState /> */}
+      {/* <ArrayState /> */}
       <Container />
-      <NumberState />
-      <ObjectState />
-      <ArrayState />
     </>
   );
 }
