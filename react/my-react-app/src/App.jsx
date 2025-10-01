@@ -18,8 +18,8 @@ import CardContainer from "./components/Props/PropsFunction/CardContainer";
 import NumberState from "./components/State/NumberState";
 import ObjectState from "./components/State/ObjectState";
 import ArrayState from "./components/State/ArrayState";
-import Container from "./components/StateAdvanced/Container";
-
+// import Container from "./components/StateAdvanced/Container";
+import Container from "./components/UseEffect/Container";
 // 컴포넌트 함수 외부는 import문을 제외하고는 작성하지 않는다
 
 //파일명과 동일한 함수는 컴포넌트 함수
