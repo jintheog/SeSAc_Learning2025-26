@@ -23,7 +23,7 @@ import Container from "./components/UseEffect/Container";
 // 컴포넌트 함수 외부는 import문을 제외하고는 작성하지 않는다
 //파일명과 동일한 함수는 컴포넌트 함수
 //
-// import MovieList from "./components/TMDB/MovieList";
+import MovieList from "./components/TMDB/MovieList";
 import MovieDetail from "./components/TMDB/MovieDetail";
 export default function App() {
   return (
@@ -44,8 +44,8 @@ export default function App() {
       {/* <ObjectState /> */}
       {/* <ArrayState /> */}
       {/* <Container /> */}
-      {/* <MovieList /> */}
-      <MovieDetail />
+      <MovieList />
+      {/* <MovieDetail /> */}
     </>
   );
 }
