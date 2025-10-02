@@ -5,4 +5,20 @@ import axiosInstance from "./index";
 // import axiosInstance from "."; 그냥 . 으로 되어 있으면 같은 위치 안의 index를 찾음
 
 // TMDB Popular API 요청 함수
-function getPopularMovies() {}
+// 응답 데이터를 반환하는 함수
+// export : 모듈 내보내기
+async function getPopularMovies() {
+  const config = {
+    method: "GET",
+    url: `/movie/popular`,
+    params: {
+      page: 1,
+    },
+  };
+
+  // 응답 데이터 res 반환
+  const res = await axiosInstance(config);
+  return res;
+}
+
+export default getPopularMovies;

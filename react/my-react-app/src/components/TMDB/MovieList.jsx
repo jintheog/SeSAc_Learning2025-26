@@ -1,20 +1,12 @@
 import { useEffect, useState } from "react";
-import axiosInstance from "./../../api";
+import getPopularMovies from "../../api/tmdb";
 
 export default function MovieList() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const config = {
-        method: "GET",
-        url: `/movie/popular`,
-        params: {
-          page: 1,
-        },
-      };
-
-      const res = await axiosInstance(config);
+      const res = await getPopularMovies();
       setMovies(res["data"]["results"]);
     }
 
