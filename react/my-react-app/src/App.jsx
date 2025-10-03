@@ -24,7 +24,7 @@ import Container from "./components/UseEffect/Container";
 //파일명과 동일한 함수는 컴포넌트 함수
 //
 import MovieList from "./components/TMDB/MovieList";
-import MovieDetail from "./components/TMDB/MovieDetail";
+// import MovieDetail from "./components/TMDB/MovieDetail";
 export default function App() {
   return (
     <>
