@@ -10,11 +10,16 @@ import { createBrowserRouter } from "react-router-dom";
 
 // 레이아웃 컴포넌트 불러오기
 import RootLayout from "../layout/RootLayout";
+import AuthLayout from "../layout/AuthLayout";
 
 // 페이지 컴포넌트 불러오기
 import Home from "../pages/RootPages/Home";
 import About from "../pages/RootPages/About";
 import Profile from "../pages/RootPages/Profile";
+
+import AuthHome from "../pages/AuthPages/AuthHome";
+import Login from "../pages/AuthPages/Login";
+import Signup from "../pages/AuthPages/Signup";
 
 //라우터 설정 생성
 const router = createBrowserRouter([
@@ -49,6 +54,28 @@ const router = createBrowserRouter([
       {
         path: "profile",
         Component: Profile,
+      },
+    ],
+  },
+
+  // AuthLayout 경로 설정
+  {
+    path: "/auth",
+    Component: AuthLayout,
+    children: [
+      {
+        index: true,
+        Component: AuthHome,
+      },
+      //로그인 경로(path)와 Component 설정
+      {
+        path: "login",
+        Component: Login,
+      },
+      //회원가입 경로(path)와 Component 설정
+      {
+        path: "signup",
+        Component: Signup,
       },
     ],
   },
