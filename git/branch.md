@@ -45,3 +45,9 @@
 9. (로컬) git switch main
 10. (로컬) git pull origin main
 11. (로컬) git branch -D 브랜치명
+
+### 병합 방식 차이
+
+- merge : 병합 커밋이 생성된다
+- rebase : 여러개의 커밋을 main 브랜치에 재배치한다
+- squash : 여러개의 커밋을 하나로 합쳐서 main 브랜치에 재배치 한다.
