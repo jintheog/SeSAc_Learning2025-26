@@ -18,14 +18,15 @@ export default function PostDetail() {
     //Get a single product API를 요청 후 화면에 게시글 상세 정보 렌더링
     async function getPost() {
       const response = await axios.get(`https://dummyjson.com/post/${postId}`);
-      setPosts(response.data.posts);
+      setPost(response.data);
     }
     getPost();
   }, [postId]);
   return (
     <div>
-      <p>제목 - {postId.title}</p>
+      <p>제목 - {post.title}</p>
       <p>내용</p>
+      <div>{post.body}</div>
     </div>
   );
 }

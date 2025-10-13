@@ -17,7 +17,7 @@ export default function PostList() {
     <div>
       {posts.map((post) => {
         return (
-          <Link key={post.id} to={`/posts/${post.id}`}>
+          <Link to={`/posts/${post.id}`}>
             No. {post.id} - {post.title}
           </Link>
         );
