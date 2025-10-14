@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         Component: PostList,
       },
       {
-        path: "post/:postId",
+        path: "posts/:postId",
         Component: PostDetail,
       },
       // {
