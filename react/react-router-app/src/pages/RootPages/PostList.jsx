@@ -56,7 +56,7 @@ export default function PostList() {
       </div>
       {posts.map((post) => {
         return (
-          <Link to={`/posts/${post.id}`} className="block">
+          <Link to={PATHS.ROOT.getPostDetail(post.id)} className="block">
             No. {post.id} - {post.title}
           </Link>
         );
