@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom"; //쿼리 파라미터 관리
+import PATHS from "../../constants/paths";
 
 export default function PostList() {
   const [posts, setPosts] = useState([]);
