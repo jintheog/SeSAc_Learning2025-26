@@ -29,6 +29,9 @@ import PATHS from "../constants/paths"; //경로 상수
 import rootRoutes from "./routes/rootRoute"; //RootLayout 관련 경로 배열 불러오기
 import authRoutes from "./routes/authRoute";
 
+//404 페이지 처리
+import NotFound from "../pages/NotFound";
+
 //라우터 설정 생성
 const router = createBrowserRouter([
   // {
@@ -47,6 +50,11 @@ const router = createBrowserRouter([
   // },
   ...rootRoutes, //스프레드 연산자로 경로 배열을 복사
   ...authRoutes,
+
+  {
+    path: "*", // 별표 : 모든것에 매핑(일치)되는 특수 문자
+    Component: NotFound,
+  },
   // {
   //   path: PATHS["ROOT"]["INDEX"],
   //   Component: RootLayout,
