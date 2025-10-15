@@ -8,11 +8,18 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 // 스토어 (store) 설정
 import { store } from "./store";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 createRoot(document.getElementById("root")).render(
+  // <StrictMode>
+  //   <Provider store={store}>
+  //     <App />
+  //   </Provider>
+  // </StrictMode>
   <StrictMode>
     <Provider store={store}>
-      <App />
+      <RouterProvider router={router}></RouterProvider>
     </Provider>
   </StrictMode>
 );
