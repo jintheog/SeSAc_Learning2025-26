@@ -8,9 +8,12 @@ export default function Counter() {
   // counter의 전역 상태 불러오기
   const counter = useSelector((state) => state.counter);
 
+  // 전역 상태 count
+  const count = useSelector((state) => state["counter"]["count"]);
+
   useEffect(() => {
     // (임시) 전역 상태 데이터 확인용 코드
     console.log(counter);
   }, []);
-  return <div>Counter</div>;
+  return <div>전역 상태 count의 값 : {count}</div>;
 }
