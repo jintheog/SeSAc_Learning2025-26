@@ -15,7 +15,7 @@ const SUPABASE_ANON_KEY =
 
 // 회원가입 비동기 처리
 const signup = createAsyncThunk(
-  "auth/signup",
+  "auth",
   //비동기처리 함수
   async (data, { rejectWithValue }) => {
     // 매개변수 data : 액션의 페이로드 역할
@@ -46,6 +46,36 @@ const signup = createAsyncThunk(
   }
 );
 
+// 로그인 비동기 처리 액션
+const login = createAsyncThunk(
+  "auth/login", //이름
+  // 비동기 (async) 처리 함수
+  async (data, { rejectWithValue }) => {
+    //로그인 로직 코드
+    try {
+      const config = {
+        url: `${SUPABSE_URL}/auth/v1/token?grant_type=password`,
+        method: "POST",
+        headers: {
+          "Content-type": "application.json",
+          apikey: SUPABASE_ANON_KEY,
+        },
+        data: {
+          //로그인 정보
+          email: data.email,
+          password: data.password,
+        },
+      };
+      const response = await axios(config);
+
+      console.log(response.data); // (임시) 응답 구조를 출력
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
 // 비동기 처리 3개의 상태: 대기, 성공, 실패(거절)
 
 //초기 상태
@@ -57,7 +87,7 @@ const initialState = {
 
 // 슬라이스 (리듀서 + 액션) 생성
 const authSlice = createSlice({
-  name: "auth",
+  name: "auth/signup",
   initialState: initialState,
   reducers: {
     // 회원가입 성공 여부를 초기화 (false)
@@ -75,6 +105,10 @@ const authSlice = createSlice({
         // signup 비동기 처리가 성공(fulfilled)일 때 실행되는 콜백함수
         state.isSignup = true;
       })
+      .addCase(login.fulfilled, (state, action) => {
+        // login 비동기 처리가 성공일 때 실행 되는 콜백 함수
+        state.token = action.payload["access_token"];
+      })
       .addCase(signup.rejected, (state, action) => {
         // action.payload 어디서 왔는가?
         // return rejectWithValue(error["response"]["data"])
@@ -86,4 +120,4 @@ const authSlice = createSlice({
 // 액션과 리듀서, 비동기 처리 액션 내보내기
 export const { resetIsSignup } = authSlice.actions;
 export default authSlice.reducer;
-export { signup };
+export { signup, login };
