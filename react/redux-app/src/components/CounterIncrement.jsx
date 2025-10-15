@@ -19,6 +19,9 @@ export default function CounterIncrement() {
      * type: "counter/increment"
      *
      */
+    // dispatch 함수의 인자로 액션 생성자 함수를 전달
+    // 액션 생성자 함수(increment)가 생성한 액션을 dispatch 함수로 스토어의 리듀서에 전달
+    dispatch(increment());
   }
   return (
     <div>
