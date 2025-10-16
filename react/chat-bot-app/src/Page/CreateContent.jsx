@@ -26,6 +26,10 @@ export default function CreateContent() {
     // 사용자의 프롬프트를 대화 내역에 추가 (role: "user")
     // role 역할 : user라면 오른쪽에 배치, ai라면 왼쪽에 배치
     setMessages((prev) => [...prev, { role: "user", content: prompt }]);
+
+    setIsLoading(true); // 요청 시작
+    await generateAiContent(); // AI 응답 생성 함수
+    setIsLoading(false); // 요청 종료
   }
 
   // AI에게 요청을 보내서 응답을 생성하는 함수
@@ -43,10 +47,6 @@ export default function CreateContent() {
 
       // messages 상태에 AI와 응답을 저장
       setMessages((prev) => [...prev, { role: "ai", content: response.text }]);
-
-      setIsLoading(true); // 요청 시작
-      await generateAiContent(); // AI 응답 생성 함수
-      setIsLoading(false); // 요청 종료
     } catch (error) {
       console.error(error);
     }
