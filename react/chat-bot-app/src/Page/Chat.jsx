@@ -5,7 +5,9 @@ import ChatForm from "../components/ChatForm";
 import { ai } from "../utils/genai";
 
 // chat 객체 불러오기
-import { chat } from "../utils/genai";
+import { chat, config } from "../utils/genai";
+
+//응답 제어 파라미터 불러오기
 
 export default function Chat() {
   const [prompt, setPrompt] = useState(""); // 사용자 입력 프롬프트 관리 상태
@@ -34,6 +36,7 @@ export default function Chat() {
     try {
       const response = await chat.sendMessage({
         message: currentPrompt,
+        config: config,
       });
 
       console.log(response.data);
