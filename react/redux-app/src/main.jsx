@@ -11,6 +11,10 @@ import { store } from "./store";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
 
+// Persist 스토어 적용
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor } from "./store";
+
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
   //   <Provider store={store}>
@@ -19,7 +23,10 @@ createRoot(document.getElementById("root")).render(
   // </StrictMode>
   <StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router}></RouterProvider>
+      {/** Persist Gate 적용 */}
+      <PersistGate persistor={persistor}>
+        <RouterProvider router={router}></RouterProvider>
+      </PersistGate>
     </Provider>
   </StrictMode>
 );
