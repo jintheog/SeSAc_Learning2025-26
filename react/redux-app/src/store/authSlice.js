@@ -57,7 +57,7 @@ const login = createAsyncThunk(
         url: `${SUPABSE_URL}/auth/v1/token?grant_type=password`,
         method: "POST",
         headers: {
-          "Content-type": "application.json",
+          "Content-Type": "application.json",
           apikey: SUPABASE_ANON_KEY,
         },
         data: {
@@ -72,6 +72,32 @@ const login = createAsyncThunk(
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// login 비동기 처리(createAsyncThunk) 아래
+const logout = createAsyncThunk(
+  "auth/logout",
+  async (_, { rejectWithValue, getState }) => {
+    try {
+      // axios 요청 설정 (config)
+      const config = {
+        url: `${SUPABSE_URL}/auth/v1/logout`,
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: SUPABASE_ANON_KEY,
+          // 사용자 인증 정보(토큰)를 함께 전송
+          // 로그아웃 : 누가 로그아웃을 하는지에 대한 정보(토큰)가 필요
+          Authorization: `Bearer ${getState().auth.token}`,
+        },
+      };
+      const response = await axios(config);
+      return response.data;
+    } catch (error) {
+      console.error(error); // (임시) 디버깅용 코드
+      return rejectWithValue(error["response"]["data"]);
     }
   }
 );
@@ -109,6 +135,11 @@ const authSlice = createSlice({
         // login 비동기 처리가 성공일 때 실행 되는 콜백 함수
         state.token = action.payload["access_token"];
       })
+      .addCase(logout.fulfilled, (state) => {
+        //로그아웃 비동기 처리가 성공한 상태
+        //token 상태 초기화
+        state.token = null;
+      })
       .addCase(signup.rejected, (state, action) => {
         // action.payload 어디서 왔는가?
         // return rejectWithValue(error["response"]["data"])
@@ -120,4 +151,4 @@ const authSlice = createSlice({
 // 액션과 리듀서, 비동기 처리 액션 내보내기
 export const { resetIsSignup } = authSlice.actions;
 export default authSlice.reducer;
-export { signup, login };
+export { signup, login, logout };
