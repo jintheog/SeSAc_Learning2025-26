@@ -21,6 +21,8 @@ DROP TABLE student;
 ###### CRUD
 
 ```sql
+-- DML
+
 -- 데이터 추가 (생성, create)
 INSERT INTO student (name) VALUES ('kim');
 
