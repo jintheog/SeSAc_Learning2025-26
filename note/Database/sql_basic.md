@@ -12,7 +12,7 @@ CREATE TABLE student (
 );
 ```
 
-###### 데이터 삭제
+###### 테이블 삭제
 
 ```sql
 DROP TABLE student;
